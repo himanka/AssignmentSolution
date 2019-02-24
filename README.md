@@ -16,3 +16,6 @@ question 3)
   we can use the same inheritance approch to implement the rooster since rooster is also a bird. we can extend the Bird lass and override sing method to have different implementation for rooster.
   Since chicken and rooster both are same species but they are distinghushed by the gender. Which means most of the behaviours they have are same but some of the behaviors they have are unique to themself. So that we can have a super class which has the common bahaviors of chicken and rooster and at each chicken and rooster class we can have our own implentations for sing method.
   to implement the rooster we can use interfaces if we do not want to use inheritance. Interfaces can also be used to enforce certain behaviors to certain classes and its much more effective than using inheritance. since java doesn't support multiple inheritance, using interfaces to enforce bahaviors would be the idle solution.
+
+Question 4)
+  since we need to implement same implementation of parrot with minor differences we can have a parrot factory which will retrun parrot objects based on our needs. It will be very easy to maintain as well since we do not have to maintain seperate classes for each implementation of parrot classes. We can simply provide the difference as a parameter during the object creation and it will alow us to maintain clear code as well.
