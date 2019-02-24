@@ -12,3 +12,7 @@ question 2)
   To implement the duck we can directly inherit the bird class and override the sing method.Since there is no Swim method we have to add new method called void swim() and provide implemntation for it.
   To implement the chicken, similarly we can implemnt the bird class and override sing method. Since chicken can not fly we can override fly method of the bird class without providing any implementation at chicken class.
   
+question 3)
+  we can use the same inheritance approch to implement the rooster since rooster is also a bird. we can extend the Bird lass and override sing method to have different implementation for rooster.
+  Since chicken and rooster both are same species but they are distinghushed by the gender. Which means most of the behaviours they have are same but some of the behaviors they have are unique to themself. So that we can have a super class which has the common bahaviors of chicken and rooster and at each chicken and rooster class we can have our own implentations for sing method.
+  
