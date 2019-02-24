@@ -84,4 +84,26 @@ public class SolutionTest {
 		roosterWithoutInheritance.fly();
 		System.out.println("\n");
 	}
+	
+	
+	@Test
+	public void testParrotWithDogs() {
+		System.out.println("test case testParrotWithDogs");
+		ParrotFactory.getInstance("LivingWithDogs").sing();
+		System.out.println("\n");
+	}
+	
+	@Test
+	public void testParrotWithCats() {
+		System.out.println("test case testParrotWithCats");
+		ParrotFactory.getInstance("LivingWithCats").sing();
+		System.out.println("\n");
+	}
+	@Test
+	public void testParrotWithRoosters() {
+		System.out.println("test case testParrotWithRoosters");
+		ParrotFactory.getInstance("LivingWithRooster").sing();
+		System.out.println("\n");
+	}
+	
 }
