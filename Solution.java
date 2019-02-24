@@ -16,20 +16,25 @@ abstract class Animal {
 	}
 }
 
- class Bird extends Animal {
-	 void fly() {
-			System.out.println("I am flying");
-		}
-		
-		void sing(){
-			System.out.println("I am Singing");
+class Bird extends Animal {
+	void fly() {
+		System.out.println("I am flying");
+	}
+
+	void sing() {
+		System.out.println("I am Singing");
 	}
 }
 
-class Chicken extends Bird {
+class SuperRoosterChicken extends Bird {
 
 	@Override
-	void fly() {}
+	void fly() {
+	}
+
+}
+
+class Chicken extends SuperRoosterChicken {
 
 	@Override
 	void sing() {
@@ -45,9 +50,15 @@ class Duck extends Bird {
 	void sing() {
 		System.out.println("Duck sings Quack, quack");
 	}
-	
-	void swim(){
+
+	void swim() {
 		System.out.println("Duck is swiming.");
 	}
+}
 
+class Rooster extends SuperRoosterChicken {
+	@Override
+	void sing() {
+		System.out.println("Rooster sings Cock-a-doodle-doo");
+	}
 }
