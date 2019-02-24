@@ -9,6 +9,7 @@ public class SolutionTest {
 	Duck duck;
 	Chicken chicken;
 	Rooster rooster;
+	RoosterWithoutInheritance roosterWithoutInheritance;
 
 	@Before
 	public void setUp() throws Exception {
@@ -16,6 +17,7 @@ public class SolutionTest {
 		duck =  new Duck();
 		chicken= new Chicken();
 		rooster = new Rooster();
+		roosterWithoutInheritance =  new RoosterWithoutInheritance();
 	}
 
 	@Test
@@ -63,7 +65,23 @@ public class SolutionTest {
 	
 	@Test
 	public void testRoosterFly() {
+		System.out.println("test case testRoosterFly");
 		rooster.fly();
+		System.out.println("\n");
+	}
+	
+	
+	@Test
+	public void testRoosterWithoutInheritanceSing() {
+		System.out.println("test case testRoosterWithoutInheritanceSing");
+		roosterWithoutInheritance.sing();
+		System.out.println("\n");
+	}
+	
+	@Test
+	public void testRoosterWithoutInheritanceFly() {
+		System.out.println("test case testRoosterWithoutInheritanceFly");
+		roosterWithoutInheritance.fly();
 		System.out.println("\n");
 	}
 }
