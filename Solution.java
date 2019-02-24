@@ -11,7 +11,7 @@ public class Solution {
 
 }
 
-class Animal {
+abstract class Animal {
 	void walk() {
 		System.out.println("I am walking");
 	}
