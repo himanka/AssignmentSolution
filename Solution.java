@@ -62,3 +62,23 @@ class Rooster extends SuperRoosterChicken {
 		System.out.println("Rooster sings Cock-a-doodle-doo");
 	}
 }
+
+
+interface RoosterBehavior{
+	
+	void sing();
+	void fly();
+}
+
+class RoosterWithoutInheritance implements RoosterBehavior{
+
+	@Override
+	public void sing() {
+		System.out.println("Rooster sings Cock-a-doodle-doo");
+	}
+
+	@Override
+	public void fly() {	}
+	
+}
+
