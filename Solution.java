@@ -4,7 +4,7 @@ public class Solution {
 
 	public static void main(String[] args) {
 		
-		  Bird bird = new Bird(); bird.walk(); bird.fly(); bird.sing();
+		Bird bird = new Bird(); bird.walk(); bird.fly(); bird.sing();
 		 
 	}
 
@@ -24,6 +24,17 @@ class Bird extends Animal {
 	void sing() {
 		System.out.println("I am Singing");
 	}
+}
+
+abstract class Fish extends Animal {
+	@Override
+	void walk() {
+	}
+
+	abstract void size();
+
+	abstract void color();
+
 }
 
 class SuperRoosterChicken extends Bird {
@@ -63,14 +74,14 @@ class Rooster extends SuperRoosterChicken {
 	}
 }
 
+interface RoosterBehavior {
 
-interface RoosterBehavior{
-	
 	void sing();
+
 	void fly();
 }
 
-class RoosterWithoutInheritance implements RoosterBehavior{
+class RoosterWithoutInheritance implements RoosterBehavior {
 
 	@Override
 	public void sing() {
@@ -78,37 +89,92 @@ class RoosterWithoutInheritance implements RoosterBehavior{
 	}
 
 	@Override
-	public void fly() {	}
-	
+	public void fly() {
+	}
+
 }
 
-
-class Parrot extends Bird{
+class Parrot extends Bird {
 	String voice;
-	
-	Parrot(String voice){
+
+	Parrot(String voice) {
 		this.voice = voice;
 	}
-	
+
 	@Override
 	public void sing() {
 		System.out.println("Parrot sings " + voice);
 	}
-} 
+}
 
 class ParrotFactory {
-	
-	static Parrot getInstance(String type){
-		switch(type){
+
+	static Parrot getInstance(String type) {
+		switch (type) {
 		case "LivingWithDogs":
 			return new Parrot("Woof, woof");
 		case "LivingWithCats":
 			return new Parrot("Meow");
 		case "LivingWithRooster":
 			return new Parrot("Cock-a-doodle-doo");
-		
+
 		}
 		return null;
+
+	}
+
+}
+
+class Shark extends Fish {
+
+	@Override
+	void size() {
+		System.out.println("Shark is large");
+
+	}
+
+	@Override
+	void color() {
+		System.out.println("Shark is of color Grey");
+
+	}
+	
+	void eat(){
+		System.out.println("Shark eats other fish");
+	}
+
+}
+
+class CorwFish extends Fish {
+
+	@Override
+	void size() {
+		System.out.println("CrowFish is small");
+
+	}
+
+	@Override
+	void color() {
+		System.out.println("CorwFish is of color Orange");
+
+	}
+	
+	void joke(){
+		System.out.println("CrowFish Makes jokes");
+	}
+
+}
+
+interface Swimable{
+	
+	void swim();
+}
+
+class Dolphine implements Swimable{
+
+	@Override
+	public void swim() {
+		System.out.println("Dolphine is swiming");
 		
 	}
 	
