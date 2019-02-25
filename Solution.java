@@ -26,6 +26,17 @@ class Bird extends Animal {
 	}
 }
 
+class Butterfly extends Animal{
+	@Override
+	void walk() {
+	}
+	
+	void fly() {
+		System.out.println("Butterfly is  flying");
+	}
+	
+}
+
 abstract class Fish extends Animal {
 	@Override
 	void walk() {
