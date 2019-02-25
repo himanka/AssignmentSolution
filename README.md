@@ -24,3 +24,6 @@ Question 4)
 Question B)
   section 3) to avoid duplicating the code we can use the super class to implement the common behaviors. So that while we extend we can have the common behaviors in child classes.
   if we are using Java8, we can use default methods in interfaces to enforce common functionality where  implementing classes will obtain those functionalities when they implemnts the interface.
+  
+  Question E)
+   we can use reflection to check whether purticular class is having purticular method or not. That way we can easily check how many animal objects are having fly, walk, sing and swim methods.
