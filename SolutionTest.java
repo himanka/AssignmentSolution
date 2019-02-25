@@ -13,6 +13,7 @@ public class SolutionTest {
 	Shark shark;
 	CorwFish crowFish;
 	Dolphine dolphine;
+	Butterfly butterfly;
 
 	@Before
 	public void setUp() throws Exception {
@@ -24,6 +25,7 @@ public class SolutionTest {
 		shark =  new Shark();
 		crowFish =  new CorwFish();
 		dolphine = new Dolphine();
+		butterfly =  new Butterfly();
 	}
 
 	@Test
@@ -152,4 +154,11 @@ public class SolutionTest {
 		System.out.println("\n");
 	}
 	
+	
+	@Test
+	public void testButterflyFlying() {
+		System.out.println("test case testButterflyFlying");
+		butterfly.fly();
+		System.out.println("\n");
+	}
 }
