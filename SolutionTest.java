@@ -1,5 +1,7 @@
 package com.solution;
 
+import java.util.Calendar;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +16,7 @@ public class SolutionTest {
 	CorwFish crowFish;
 	Dolphine dolphine;
 	Butterfly butterfly;
+	Caterpillar caterpiller;
 
 	@Before
 	public void setUp() throws Exception {
@@ -26,6 +29,7 @@ public class SolutionTest {
 		crowFish =  new CorwFish();
 		dolphine = new Dolphine();
 		butterfly =  new Butterfly();
+		caterpiller =  new Caterpillar();
 	}
 
 	@Test
@@ -159,6 +163,14 @@ public class SolutionTest {
 	public void testButterflyFlying() {
 		System.out.println("test case testButterflyFlying");
 		butterfly.fly();
+		System.out.println("\n");
+	}
+	
+	
+	@Test
+	public void testCatepillerWalikng() {
+		System.out.println("test case testButterflyFlying");
+		caterpiller.walk();
 		System.out.println("\n");
 	}
 }
