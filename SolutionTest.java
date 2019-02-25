@@ -12,6 +12,7 @@ public class SolutionTest {
 	RoosterWithoutInheritance roosterWithoutInheritance;
 	Shark shark;
 	CorwFish crowFish;
+	Dolphine dolphine;
 
 	@Before
 	public void setUp() throws Exception {
@@ -22,6 +23,7 @@ public class SolutionTest {
 		roosterWithoutInheritance =  new RoosterWithoutInheritance();
 		shark =  new Shark();
 		crowFish =  new CorwFish();
+		dolphine = new Dolphine();
 	}
 
 	@Test
@@ -139,6 +141,14 @@ public class SolutionTest {
 	public void testCrowFishMakesJokes() {
 		System.out.println("test case testSharkColorAndSize");
 		crowFish.joke();
+		System.out.println("\n");
+	}
+	
+	
+	@Test
+	public void testDolphineSwim() {
+		System.out.println("test case testDolphineSwim");
+		dolphine.swim();
 		System.out.println("\n");
 	}
 	
