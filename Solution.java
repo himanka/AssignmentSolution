@@ -93,6 +93,7 @@ class Duck extends Bird {
 }
 
 class Rooster extends SuperRoosterChicken {
+	
 	@Override
 	void sing() {
 		System.out.println("Rooster sings Cock-a-doodle-doo");
@@ -120,10 +121,14 @@ class RoosterWithoutInheritance implements RoosterBehavior {
 }
 
 class Parrot extends Bird {
-	String voice;
+	String voice ="";
 
 	Parrot(String voice) {
 		this.voice = voice;
+	}
+
+	public Parrot() {
+
 	}
 
 	@Override
@@ -202,5 +207,61 @@ class Dolphine implements Swimable{
 		System.out.println("Dolphine is swiming");
 		
 	}
+}
+
+class RoosterPoc extends Bird{
+	String voice;
+	
+	public RoosterPoc(String voice){
+		this.voice = voice;
+	}
+	
+	@Override
+	void sing() {
+		System.out.println("Rooster sings " + voice);
+	}
+	
+}
+
+class RoosterFactory {
+	
+	
+	static RoosterPoc getRoosterByLanguage(String language){
+		
+		switch(language){
+		case "Danish":
+			return new RoosterPoc("kykyliky");
+		case "Dutch":
+			return new RoosterPoc("kukeleku");
+		case "Finnish":
+			return new RoosterPoc("kukko kiekuu");
+		case "French":
+			return new RoosterPoc("cocorico");
+		case "German":
+			return new RoosterPoc("kikeriki");
+		case "Greek":
+			return new RoosterPoc("kikiriki");
+		case "Hebrew":
+			return new RoosterPoc("coo-koo-ri-koo");
+		case "Hungarian":
+			return new RoosterPoc("kukuriku");
+		case "Italian":
+			return new RoosterPoc("chicchirichi");
+		case "Japanese":
+			return new RoosterPoc("ko-ke-kok-ko-o");
+		case "Portuguese":
+			return new RoosterPoc("cucurucu");
+		case "Russian":
+			return new RoosterPoc("kukareku");		
+		case "Swedish":
+			return new RoosterPoc("kuckeliku");
+		case "Turkish":
+			return new RoosterPoc("kuk-kurri-kuuu");
+		case "Urdu":
+			return new RoosterPoc("kuklooku");
+		}
+		return null;
+	}
+	
 	
 }
