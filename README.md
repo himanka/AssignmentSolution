@@ -27,3 +27,11 @@ Question B)
   
   Question E)
    we can use reflection to check whether purticular class is having purticular method or not. That way we can easily check how many animal objects are having fly, walk, sing and swim methods.
+   
+   
+   Bonus Question 2) 
+    when implementing the RestAPI to get roosters with different sounds based on their naive language can be easily done by getting the language as a parameter.
+    for the rest API methog should be GET where we request an object of  a rooster based on their language.
+    so URL would be like @RequestMapping(value = "/rooster/{language}", method = RequestMethod.GET) and method signature for get rooster would be like public RoosterPoc getRooster(@PathVariable String language){}
+    
+   
