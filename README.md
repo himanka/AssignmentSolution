@@ -19,3 +19,8 @@ question 3)
 
 Question 4)
   since we need to implement same implementation of parrot with minor differences we can have a parrot factory which will retrun parrot objects based on our needs. It will be very easy to maintain as well since we do not have to maintain seperate classes for each implementation of parrot classes. We can simply provide the difference as a parameter during the object creation and it will alow us to maintain clear code as well.
+
+
+Question B)
+  section 3) to avoid duplicating the code we can use the super class to implement the common behaviors. So that while we extend we can have the common behaviors in child classes.
+  if we are using Java8, we can use default methods in interfaces to enforce common functionality where  implementing classes will obtain those functionalities when they implemnts the interface.
