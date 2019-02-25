@@ -10,6 +10,8 @@ public class SolutionTest {
 	Chicken chicken;
 	Rooster rooster;
 	RoosterWithoutInheritance roosterWithoutInheritance;
+	Shark shark;
+	CorwFish crowFish;
 
 	@Before
 	public void setUp() throws Exception {
@@ -18,6 +20,8 @@ public class SolutionTest {
 		chicken= new Chicken();
 		rooster = new Rooster();
 		roosterWithoutInheritance =  new RoosterWithoutInheritance();
+		shark =  new Shark();
+		crowFish =  new CorwFish();
 	}
 
 	@Test
@@ -103,6 +107,38 @@ public class SolutionTest {
 	public void testParrotWithRoosters() {
 		System.out.println("test case testParrotWithRoosters");
 		ParrotFactory.getInstance("LivingWithRooster").sing();
+		System.out.println("\n");
+	}
+	
+	
+	@Test
+	public void testSharkColorAndSize() {
+		System.out.println("test case testSharkColorAndSize");
+		shark.color();
+		shark.size();
+		System.out.println("\n");
+	}
+	
+	
+	@Test
+	public void testSharkEat() {
+		System.out.println("test case testSharkColorAndSize");
+		shark.eat();
+		System.out.println("\n");
+	}
+	
+	@Test
+	public void testCrowFishColorAndSize() {
+		System.out.println("test case testSharkColorAndSize");
+		crowFish.size();
+		crowFish.color();
+		System.out.println("\n");
+	}
+	
+	@Test
+	public void testCrowFishMakesJokes() {
+		System.out.println("test case testSharkColorAndSize");
+		crowFish.joke();
 		System.out.println("\n");
 	}
 	
